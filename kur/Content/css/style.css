@@ -1,0 +1,57 @@
+﻿@import url(normalize.css);
+body {
+    font-family:'Open Sans',sans-serif;
+    font-size:14px;
+    background:black;
+    overflow-y:scroll;
+    cursor:default;
+    color:black;
+    text-align:center;
+    
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+#container{
+    width:928px;
+    padding:13px 16px;
+    position:relative;
+    margin:auto;
+    margin-top:65px;
+    box-shadow:0 0 10px #1c3564;
+    border-radius:0 26px;
+    background:darkred;
+}
+#balan{
+    height:200px;
+    margin:40px;
+    position:relative;
+    border-radius:8px 8px 8px 8px;
+    background:#808080;
+    padding:20px;
+    
+}
+p{
+    text-align:center;
+    font-weight:bold;
+   
+}
+h2{
+    font-weight:bold;
+}
+#button{
+    background:white;
+    width:100px;
+    height:100px;
+    margin:50px;
+}
+#sonuc{
+    margin:30px;
+}
+#padi{
+    font-weight:bold;
+}
+
+
+

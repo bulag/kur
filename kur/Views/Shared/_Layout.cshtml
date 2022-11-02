@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <script id="ks">
+      
+        
+        function donus() {
+            var e = document.getElementById('k1').value;
+           // var selectedOp = e.options[e.selectedIndex].text;
+            var   k= document.getElementById('k2').value;
+            //var selectedOp2 = k.options[k.selectedIndex].text;
+            var deger2 = parseInt(document.getElementById('sayi1').value);
+            if (e == "USD" && k == "Euro") {
+                document.getElementById('sonuc').value = deger2 *(0.92);
+            }
+            if (e == "USD" && k == "Sterling") {
+                document.getElementById('sonuc').value = deger2 * (0.79);
+            }
+            if (e == "Euro" && k == "USD") {
+                document.getElementById('sonuc').value = deger2 / (0.92);
+            }
+            if (e == "Euro" && k == "Sterling") {
+                document.getElementById('sonuc').value = deger2 * (0.86);
+            }
+            if (e == "Sterling" && k == "USD") {
+                document.getElementById('sonuc').value = deger2 / (0.79);
+            }
+            if (e == "Sterling" && k == "Euro") {
+                document.getElementById('sonuc').value = deger2 / (0.86);
+            }
+
+        }
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    <meta name="robots" content="all" />
+    <meta name="revisit-after" content="1 week" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <section id="container">
+             @RenderBody()
+        <div id="balan">
+           
+            <select name="kur1" id="k1">
+                <option selected>Kur Seç...</option>
+                <option>USD</option>
+
+                <option>Euro</option>
+
+                <option>Sterling</option>
+
+            </select>
+
+        <input type="text" id="sayi1" />
+            <select name="kur2"id="k2">
+
+                <option selected>Kur Seç...</option>
+                <option>USD</option>
+
+                <option>Euro</option>
+
+                <option>Sterling</option>
+
+            </select>
+            <br/><br/>
+            <br /><br />
+        <input type="button" value="Dönüştür" onclick="donus()" />
+            <p id="padi"> --Sonuç--<br /><input type="text" id="sonuc" color="blue" /></p>
+        </div>
+</section>
+</body>
+</html>
